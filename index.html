@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOC.AI</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: white;
+      color: black;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    h1 {
+      font-size: 60px;
+      margin: 0;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .buttons {
+      margin-top: 20px;
+      display: flex;
+      gap: 15px;
+    }
+
+    button {
+      padding: 15px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background-color: black;
+      color: white;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+
+    /* Segunda pantalla */
+    .second-screen {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .second-screen img {
+      width: 300px;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" id="mainScreen">
+    <h1>SOC.AI</h1>
+    <p>La Mejor IA del Futbol</p>
+
+    <div class="buttons">
+      <button>Nuevo chat</button>
+      <button onclick="goToSecondScreen()">¡HAZ CLICK AQUI!</button>
+    </div>
+  </div>
+
+  <div class="second-screen" id="secondScreen">
+    <img src="https://kappa.lol/puNZMm" alt="Perro">
+    <audio id="music" loop>
+      <source src="" type="audio/mpeg">
+      Tu navegador no soporta audio.
+    </audio>
+  </div>
+
+  <script>
+    function goToSecondScreen() {
+      document.getElementById('mainScreen').style.display = 'none';
+      const second = document.getElementById('secondScreen');
+      second.style.display = 'flex';
+
+      const music = document.getElementById('music');
+      music.play();
+    }
+  </script>
+
+</body>
+</html>
